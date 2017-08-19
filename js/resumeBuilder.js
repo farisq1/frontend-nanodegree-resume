@@ -18,12 +18,15 @@ var bio = {
 
     var formattedMobile = HTMLmobile.replace(DATA, bio.contacts.mobile);
     var formattedEmail = HTMLemail.replace(DATA, bio.contacts.email);
+    var formattedGithub = HTMLgithub.replace(DATA, bio.contacts.github);
+    var formattedLocation = HTMLlocation.replace(DATA, bio.contacts.location);
+    
 
     var formattedBioPic = HTMLbioPic.replace(DATA, bio.biopic);
     var formattedWelcomeMessage = HTMLwelcomeMsg.replace(DATA, bio.welcomeMessage);
 
     $('#header').prepend(formattedName + formattedRole);
-    $('#topContacts, #footerContacts').append(formattedMobile + formattedEmail);
+    $('#topContacts, #footerContacts').append(formattedMobile + formattedEmail + formattedGithub + formattedLocation);
     $('#header').append(formattedBioPic);
     $('#header').append(formattedWelcomeMessage);
 
