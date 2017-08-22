@@ -125,6 +125,7 @@ var education = {
       'name': 'AlTaqwa School',
       'location': 'Riyadh',
       'degree': 'Highschool',
+      'major' : ['Information Systems'],
       'dates': '2011 - 2014'
     }
   ],
@@ -147,13 +148,15 @@ var education = {
       for (var i = 0, iLen = education.schools.length; i < iLen; i++) {
         var formattedName = HTMLschoolName.replace(DATA, education.schools[i].name);
         var formattedDegree = HTMLschoolDegree.replace(DATA, education.schools[i].degree);
+        var formattedSchoolMajor = HTMLschoolMajor.replace(DATA, education.schools[i].major);
         var formattedSchoolDates = HTMLschoolDates.replace(DATA, education.schools[i].dates);
         var formattedLocation = HTMLschoolLocation.replace(DATA, education.schools[i].location);
         var formattedNameDegree = formattedName + formattedDegree;
 
         $('#education').append(HTMLschoolStart);
         $('.education-entry:last').append(formattedNameDegree);
-        $('.education-entry:last').append(formattedSchoolDates);
+        $(".education-entry:last").append(formattedSchoolMajor);
+	    $('.education-entry:last').append(formattedSchoolDates);
         $('.education-entry:last').append(formattedLocation);
 
         
